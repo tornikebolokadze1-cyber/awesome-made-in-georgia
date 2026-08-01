@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
-  <img src="https://img.shields.io/badge/repos-15-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
+  <img src="https://img.shields.io/badge/repos-16-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
   <img src="https://img.shields.io/badge/categories-7-A949DA?style=flat-square&labelColor=111827" alt="Categories"/>
   <img src="https://img.shields.io/badge/made_in-Sakartvelo_%F0%9F%87%AC%F0%9F%87%AA-00D0FF?style=flat-square&labelColor=111827" alt="Made in Sakartvelo"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-A949DA?style=flat-square&labelColor=111827" alt="PRs welcome"/></a>
@@ -89,6 +89,7 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 
 | Repository | ⭐ | Description |
 |---|---|---|
+| [georgian-grammar-codex-skill](https://github.com/levan-ildani/georgian-grammar-codex-skill) | 5 | A Codex skill that teaches an agent to write, edit, translate, and proofread standard literary Georgian — a language where models reliably produce fluent-looking text that any native speaker clocks as translated within a sentence. It is deliberately rule-first: `SKILL.md` stays lean, and the depth lives in thirteen reference files covering morphology, case and postposition agreement, compound writing, particles, adverbs, normative orthography, punctuation and polite forms, and where the lexical norm stops. Three of those files are the genuinely unusual part — a decision protocol for when norms conflict, a source map tracing rules back to the authorities behind them, and regression prompts for checking the skill has not drifted after someone edits it. Bilingual README, and an explicit invitation to argue with the rules. Apache-2.0. |
 | [ka-to-lat](https://github.com/Parsa-29/ka-to-lat) | 3 | Georgian has its own alphabet, which is lovely until something needs ASCII. This converts in both directions — `georgianToLatin("ლორემ იპსუმ")` gives `"Lorem ipsum"`, and the reverse works too — for the places where that matters: search indexing, URL slugs, sortable identifiers, legacy systems. Published on npm as `ka-to-lat`, and it optionally extends `String.prototype` so `"Gamarjoba!".latinToGeorgian()` works inline. The README is refreshingly honest about its one rough edge: some digraphs in the Latin→Georgian direction need specific casing (`gverDZe`, not `gverdze`) to resolve correctly. TypeScript, MIT. |
 
 ---
