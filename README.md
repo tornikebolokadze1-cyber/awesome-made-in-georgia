@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
-  <img src="https://img.shields.io/badge/repos-9-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
+  <img src="https://img.shields.io/badge/repos-14-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
   <img src="https://img.shields.io/badge/categories-7-A949DA?style=flat-square&labelColor=111827" alt="Categories"/>
   <img src="https://img.shields.io/badge/made_in-Sakartvelo_%F0%9F%87%AC%F0%9F%87%AA-00D0FF?style=flat-square&labelColor=111827" alt="Made in Sakartvelo"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-A949DA?style=flat-square&labelColor=111827" alt="PRs welcome"/></a>
@@ -77,6 +77,9 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 | Repository | ⭐ | Description |
 |---|---|---|
 | [UltrafastSecp256k1](https://github.com/shrec/UltrafastSecp256k1) | 48 | A high-performance engine for secp256k1 — the elliptic curve that signs every Bitcoin and Ethereum transaction — built across an unusually wide surface. CPU, CUDA, Metal, and OpenCL backends; embedded, ARM64, RISC-V, and WebAssembly targets; ECDSA, Schnorr, FROST, MuSig2, and BIP-352; and FFI bindings for C, Python, Node.js, Rust, Go, Swift, Java, Dart, C#, PHP, Ruby, and Kotlin. What distinguishes it from the usual speed claim is its posture toward the reader: the README opens by saying it is not a trust request but a verification package, and backs that with a continuous-audit system, replayable evidence, scoped reviewer documentation, a published list of known limitations, constant-time guarantees, and a Zenodo DOI. C++ with CUDA and Metal, MIT. |
+| [kd-screen-guard](https://github.com/KhvichaDev/kd-screen-guard) | 2 | A lock-screen overlay for web applications, written on the assumption that whoever is trying to get past it is hostile. It layers WebAuthn biometrics, PBKDF2 key derivation moved off the main thread into a Web Worker, tamper detection, webcam snapshots of whoever failed the unlock, and a hardware Web Audio siren — with React and Vue adapters and zero runtime dependencies. The kind of capability usually bought as a vendor SDK, published instead as an npm package with a live demo and its test count on the badge. TypeScript, MIT. |
+| [notifications-kd](https://github.com/KhvichaDev/notifications-kd) | 1 | A toast notification system that fills the gap between rolling your own `div` and pulling in an entire UI framework: glassmorphism modals, `requestAnimationFrame` transitions, responsive mobile behaviour, and not a single dependency. Ships on npm and over both jsDelivr and unpkg, so a plain HTML page can adopt it with one script tag and no build step. JavaScript, MIT. |
+| [kd_youtube_background_audio](https://github.com/KhvichaDev/kd_youtube_background_audio) | 1 | A Flutter package for the specific misery of playing YouTube audio in the background on a phone. It wraps `just_audio` and `youtube_explode_dart` and absorbs what actually breaks in production: muxed stream configurations, Android's Doze power saving, CORS proxying on Flutter Web, and state recovery with position preserved after a stream drops. Native lock-screen and notification-centre controls come wired rather than left as an exercise. Published on pub.dev. Dart, MIT. |
 
 ---
 
@@ -97,14 +100,17 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 | Repository | ⭐ | Description |
 |---|---|---|
 | [awesome-ai-pulse-georgia](https://github.com/tornikebolokadze1-cyber/awesome-ai-pulse-georgia) | 130 | The sister list of this one, and a queryable tool rather than just a page: 300 curated AI agent frameworks, coding agents, and automation resources, every entry described in Georgian rather than copied from its README. It ships an MCP server and an `aipulse` CLI, so you can ask which repo fits a job in natural language from inside Claude Code, Cursor, Codex, or any MCP client — instead of scrolling a 280 KB README. Maintained by the same people who maintain this list. TypeScript, CC0. |
+| [npm-trusted-publisher](https://github.com/KhvichaDev/npm-trusted-publisher) | 2 | Removes the `NPM_TOKEN` secret from your release pipeline entirely, replacing it with OIDC so publishing to npm needs no long-lived credential sitting in GitHub Actions at all. A zero-config CLI drops in a workflow that syncs package versions, updates the changelog, commits build artefacts, and attaches npm's official provenance badge to the release. Worth knowing about even if you already publish fine: a token that does not exist cannot leak or expire on you mid-release. Published on npm. JavaScript, MIT. |
 
 ---
 
 ## 🌐 Web & Applications
 
-> Web apps, sites, frontend and backend projects, mobile applications.
+> Web apps, sites, frontend and backend projects, mobile applications, and the plugins and themes that extend them.
 
-*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
+| Repository | ⭐ | Description |
+|---|---|---|
+| [KD-Waitlist-Notify](https://github.com/KhvichaDev/KD-Waitlist-Notify) | 4 | A WordPress waitlist and lead-capture plugin, written the way WordPress plugins usually are not: a feature-first directory layout, object-oriented throughout, a separate database layer, and controllers kept apart from the views instead of one thousand-line file. It collects signups ahead of a launch and notifies them in batches over email, Twilio SMS, or a custom HTTP gateway, with E.164 phone normalisation and GDPR handling built in rather than bolted on. PHP, GPL-2.0. |
 
 ---
 
