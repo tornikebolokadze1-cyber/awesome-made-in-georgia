@@ -24,10 +24,11 @@ body:
       label: Category
       options:
         - 🤖 AI Agents & Orchestration
-        - 🛠️ Developer Tools
-        - 🔤 Georgian Language & NLP
-        - 🌐 Web & Applications
+        - 🏦 Georgian APIs & Integrations
         - 📦 Libraries & SDKs
+        - 🔤 Georgian Language & NLP
+        - 🛠️ Developer Tools
+        - 🌐 Web & Applications
         - 🎮 Games & Graphics
         - Other / not sure
     validations:

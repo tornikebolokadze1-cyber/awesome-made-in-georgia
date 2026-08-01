@@ -11,8 +11,8 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
-  <img src="https://img.shields.io/badge/repos-8-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
-  <img src="https://img.shields.io/badge/categories-6-A949DA?style=flat-square&labelColor=111827" alt="Categories"/>
+  <img src="https://img.shields.io/badge/repos-9-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
+  <img src="https://img.shields.io/badge/categories-7-A949DA?style=flat-square&labelColor=111827" alt="Categories"/>
   <img src="https://img.shields.io/badge/made_in-Sakartvelo_%F0%9F%87%AC%F0%9F%87%AA-00D0FF?style=flat-square&labelColor=111827" alt="Made in Sakartvelo"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-A949DA?style=flat-square&labelColor=111827" alt="PRs welcome"/></a>
   <a href="https://aipulsegeorgia.ge"><img src="https://img.shields.io/badge/aipulsegeorgia.ge-website-A949DA?style=flat-square&labelColor=111827" alt="Website"/></a>
@@ -26,7 +26,7 @@
 
 Georgian developers write good open source, but it disappears into GitHub's millions of repositories. There has never been a single place to see what is being built in Sakartvelo. This list is that place.
 
-Unlike most awesome lists, this one is organised by **origin rather than topic**. It does not matter whether a project is about AI, the web, or games — what matters is that a Georgian built it.
+Unlike most awesome lists, this one is organised by **origin rather than topic**. It does not matter whether a project is about AI, cryptography, or games — what matters is that a Georgian built it.
 
 > **Sister list:** [Awesome AI Pulse Georgia](https://github.com/tornikebolokadze1-cyber/awesome-ai-pulse-georgia) — 300 international AI and developer tools, described in Georgian. The two lists point in opposite directions: that one curates *the best of the world* for a Georgian audience, this one shows *what Georgia builds* to everyone else.
 
@@ -37,22 +37,56 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 ## Contents
 
 - [🤖 AI Agents & Orchestration](#-ai-agents--orchestration)
-- [🛠️ Developer Tools](#️-developer-tools)
-- [🔤 Georgian Language & NLP](#-georgian-language--nlp)
-- [🌐 Web & Applications](#-web--applications)
+- [🏦 Georgian APIs & Integrations](#-georgian-apis--integrations)
 - [📦 Libraries & SDKs](#-libraries--sdks)
+- [🔤 Georgian Language & NLP](#-georgian-language--nlp)
+- [🛠️ Developer Tools](#️-developer-tools)
+- [🌐 Web & Applications](#-web--applications)
 - [🎮 Games & Graphics](#-games--graphics)
 
 ---
 
 ## 🤖 AI Agents & Orchestration
 
-> Systems that put AI models to work on real codebases: agent orchestration, task routing, durable context, and verification of what the model produced.
+> Systems that put AI models to work on real codebases — routing tasks between agents, holding context across a run, and deciding whether the output is good enough to keep.
 
 | Repository | ⭐ | Description |
 |---|---|---|
-| [kimi-atlas](https://github.com/null0xxx/kimi-atlas) | 13 | A many-agent orchestrator for Kimi Code that ships with 115 vendored official skill packages. Its central claim is that **no LLM ever computes pass/fail** — that decision belongs to a deterministic six-lens verification harness with pure gates. The `atlas` core drives a single change through an explicit `INIT → … → OUTPUT` state machine; `ATLAS-WEAVE` decomposes a larger change into a file-disjoint plan-DAG (work split so that no two agents ever touch the same file), drains it with at most three concurrent agents, and merges through a combined-tree differential gate — degrading byte-identically to a single `atlas` run when the work does not decompose. Carries a live ContextGraph recomputed on every refine pass and two-phase forward-only rollback confined to an isolated worktree, so your real tree is never touched. Python, MIT. |
-| [AIWorkHub](https://github.com/shrec/AIWorkHub) | 2 | A local-first control plane for VS Code that turns each Git repository into an isolated AI engineering workspace. It wires the models already available in your editor (Codex, Claude, DeepSeek, GLM, Copilot) to a repository-scoped task queue, a Source Graph, a session manager, durable AI memory, and a review inbox. No cloud account and no HTTP service are required, and it reuses each CLI's existing login rather than copying credentials anywhere. Two ideas carry the design: agents query the structural Source Graph instead of rescanning the tree (spending far less context), and changes are accepted only once the evidence passes. Python + VS Code extension, MIT. |
+| [kimi-atlas](https://github.com/null0xxx/kimi-atlas) | 13 | A many-agent orchestrator for Kimi Code that ships with 115 vendored official skill packages. Its central claim is that **no LLM ever computes pass/fail** — that decision belongs to a deterministic six-lens verification harness with pure gates. The `atlas` core drives a single change through an explicit `INIT → … → OUTPUT` state machine; `ATLAS-WEAVE` decomposes a larger change into a file-disjoint plan-DAG (work split so that no two agents ever touch the same file), drains it with at most three concurrent agents, and merges through a combined-tree differential gate — degrading byte-identically to a single `atlas` run when the work does not decompose. Carries a live ContextGraph recomputed on every refine pass, and two-phase forward-only rollback confined to an isolated worktree, so your real tree is never touched. Python, MIT. |
+| [AIWorkHub](https://github.com/shrec/AIWorkHub) | 2 | A local-first control plane for VS Code that turns each Git repository into an isolated AI engineering workspace. It wires the models already available in your editor — Codex, Claude, DeepSeek, GLM, Copilot — to a repository-scoped task queue, a Source Graph, a session manager, durable AI memory, and a review inbox. No cloud account and no HTTP service are required, and it reuses each CLI's existing login rather than copying credentials anywhere. Two ideas carry the design: agents query the structural Source Graph instead of rescanning the tree, which spends far less context, and a change is accepted only once the evidence passes. Python + VS Code extension, MIT. |
+| [loop-config](https://github.com/Parsa-29/loop-config) | 0 | A working setup for AI coding agents that refuses to pick a side: one `AGENTS.md` is the source of truth, and everything else is a bridge to it. Codex, Cursor, Copilot, Windsurf, and Cline read that file natively; Claude Code gets it copied or symlinked to `CLAUDE.md`. What it encodes is an Observe → Decide → Act → Verify → Learn loop, and the repo ships each tool's approval-gate settings alongside it, so the same guardrails follow you between editors instead of being rebuilt from memory on every new project. Python and shell. |
+
+---
+
+## 🏦 Georgian APIs & Integrations
+
+> Georgian banking, payment, and government systems, wrapped so software — increasingly, AI assistants — can actually use them. These integrations exist nowhere else: no foreign vendor is going to document the Revenue Service's SOAP endpoints or TBC's XML billing protocol for you.
+
+| Repository | ⭐ | Description |
+|---|---|---|
+| [georgian-payments-skills](https://github.com/erekle1/georgian-payments-skills) | 9 | Two banks in one skill pack: TBC Bank (Checkout, TPay, and the XML CHECK/PAY billing protocol) and Bank of Georgia (iPay, the installment calculator SDK, PSD2 Open Banking). Ask for a payment flow in plain language and the matching auth flow, endpoints, error codes, and code samples are pulled into context — instead of you reading bank PDFs at 2am. Installs into Claude Code, Cursor, Windsurf, Copilot, Zed, and 37+ other agents with a single `npx skills add`. Python, MIT. |
+| [rs-mcp](https://github.com/Parsa-29/rs-mcp) | 8 | Georgia's Revenue Service (rs.ge) is a SOAP estate that most developers meet only under deadline. This exposes it as 85 callable tools across the WayBill, Invoice (NTOS), and TaxPayer services, building the SOAP envelopes and parsing the XML replies so an agent can look up a taxpayer, issue a waybill, or close an invoice from a plain-language request. Since those operations move real documents, every destructive one is gated behind a human-in-the-loop confirmation, and the CLI asks `[y/N]` before anything irreversible. The same 85 operations ship three ways: as an MCP server, as `rs-cli` subcommands with JSON output, and as a Claude Skill folder. TypeScript. |
+| [flitt-payments-skill](https://github.com/Parsa-29/flitt-payments-skill) | 5 | One payment provider, covered to the bottom. Thirteen reference documents walk through SHA1 request signing, hosted checkout in both its redirect and server-to-server forms, direct card payments with the two-step 3DS flow, saved-card charges and tokenisation, subscriptions, captures, reversals, webhook validation with idempotency, and how to read Flitt's response codes. Mention Flitt in a prompt and the right reference is pulled in rather than guessed at. A Python helper generates the signatures; one `git clone` into the skills folder installs it in Claude Code or Cursor. Markdown + Python. |
+
+---
+
+## 📦 Libraries & SDKs
+
+> Packages other developers build on top of: npm, PyPI, crates.io, Maven, and the rest.
+
+| Repository | ⭐ | Description |
+|---|---|---|
+| [UltrafastSecp256k1](https://github.com/shrec/UltrafastSecp256k1) | 48 | A high-performance engine for secp256k1 — the elliptic curve that signs every Bitcoin and Ethereum transaction — built across an unusually wide surface. CPU, CUDA, Metal, and OpenCL backends; embedded, ARM64, RISC-V, and WebAssembly targets; ECDSA, Schnorr, FROST, MuSig2, and BIP-352; and FFI bindings for C, Python, Node.js, Rust, Go, Swift, Java, Dart, C#, PHP, Ruby, and Kotlin. What distinguishes it from the usual speed claim is its posture toward the reader: the README opens by saying it is not a trust request but a verification package, and backs that with a continuous-audit system, replayable evidence, scoped reviewer documentation, a published list of known limitations, constant-time guarantees, and a Zenodo DOI. C++ with CUDA and Metal, MIT. |
+
+---
+
+## 🔤 Georgian Language & NLP
+
+> Technology for the Georgian language itself: NLP models, fonts, keyboard layouts, transliteration, speech, spell checkers, and datasets.
+
+| Repository | ⭐ | Description |
+|---|---|---|
+| [ka-to-lat](https://github.com/Parsa-29/ka-to-lat) | 3 | Georgian has its own alphabet, which is lovely until something needs ASCII. This converts in both directions — `georgianToLatin("ლორემ იპსუმ")` gives `"Lorem ipsum"`, and the reverse works too — for the places where that matters: search indexing, URL slugs, sortable identifiers, legacy systems. Published on npm as `ka-to-lat`, and it optionally extends `String.prototype` so `"Gamarjoba!".latinToGeorgian()` works inline. The README is refreshingly honest about its one rough edge: some digraphs in the Latin→Georgian direction need specific casing (`gverDZe`, not `gverdze`) to resolve correctly. TypeScript, MIT. |
 
 ---
 
@@ -62,35 +96,13 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 
 | Repository | ⭐ | Description |
 |---|---|---|
-| [awesome-ai-pulse-georgia](https://github.com/tornikebolokadze1-cyber/awesome-ai-pulse-georgia) | 130 | The sister list of this one, and a tool in its own right: 300 curated AI agent frameworks, coding agents, and automation resources, every entry described in Georgian rather than copied from its README. The collection ships as more than a page — an MCP server and an `aipulse` CLI let you query all 300 entries in natural language from inside Claude Code, Cursor, Codex, or any MCP client, so you can ask which repo fits the job instead of scrolling a 280 KB README. Maintained by the same people who maintain this list. TypeScript, CC0. |
-| [georgian-payments-skills](https://github.com/erekle1/georgian-payments-skills) | 9 | Drop-in skill packages that teach an AI coding assistant the Georgian banking APIs it has never seen: TBC Bank (Checkout, TPay, and the XML CHECK/PAY billing protocol) and Bank of Georgia (iPay, the installment calculator SDK, PSD2 Open Banking). Ask for a payment flow in plain language and the skill pulls in the matching auth flow, endpoints, error codes, and code samples — instead of you reading bank PDFs at 2am. Installs into Claude Code, Cursor, Windsurf, Copilot, Zed, and 37+ other agents with a single `npx skills add`. Python, MIT. |
-| [rs-mcp](https://github.com/Parsa-29/rs-mcp) | 8 | An MCP server and CLI that put Georgia's Revenue Service (rs.ge) inside an AI assistant. It wraps the WayBill, Invoice (NTOS), and TaxPayer SOAP endpoints as 85 callable tools, building the SOAP envelopes and parsing the XML replies for you, so an agent can look up a taxpayer, issue a waybill, or close an invoice from a plain-language request. Every destructive operation is gated behind a human-in-the-loop confirmation, and the CLI asks `[y/N]` before doing anything irreversible. The same 85 operations ship three ways: as an MCP server, as `rs-cli` subcommands with JSON output, and as a Claude Skill folder. TypeScript. |
-| [flitt-payments-skill](https://github.com/Parsa-29/flitt-payments-skill) | 5 | A Claude Code and Cursor skill covering the Flitt payment API end to end: SHA1 request signing, hosted checkout in both redirect and server-to-server variants, direct card payments with the two-step 3DS flow, saved-card charges and tokenisation, subscriptions, captures, reversals, webhook validation with idempotency, and how to read the response codes. Mention Flitt in a prompt and the assistant pulls in the matching parameter reference instead of guessing at it. Thirteen reference documents plus a Python signature helper; one `git clone` into the skills folder installs it in either editor. Markdown + Python. |
-| [loop-config](https://github.com/Parsa-29/loop-config) | 0 | An agent-neutral working setup built around a single `AGENTS.md` as the source of truth, bridged to whichever AI coding tool you happen to be in: Codex, Cursor, Copilot, Windsurf, and Cline read `AGENTS.md` directly, while Claude Code gets it copied or symlinked to `CLAUDE.md`. What it encodes is an Observe → Decide → Act → Verify → Learn loop, and the repo ships each tool's approval-gate settings next to it, so the same guardrails follow you between editors instead of being rebuilt per project. Python and shell. |
-
----
-
-## 🔤 Georgian Language & NLP
-
-> Technology for the Georgian language: NLP models, fonts, keyboard layouts, transliteration, TTS/STT, spell checkers, and datasets.
-
-| Repository | ⭐ | Description |
-|---|---|---|
-| [ka-to-lat](https://github.com/Parsa-29/ka-to-lat) | 3 | A small library that transliterates Georgian into Latin and back: `georgianToLatin("ლორემ იპსუმ")` returns `"Lorem ipsum"`, and the reverse direction works too. Built for the places where Georgian script needs an ASCII form that people can still type and read — search indexing, URL slugs, sortable identifiers. Published on npm as `ka-to-lat`, and it optionally extends `String.prototype` so `"Gamarjoba!".latinToGeorgian()` works inline. The README is refreshingly honest about its one rough edge: some digraphs in the Latin→Georgian direction need specific casing (`gverDZe`, not `gverdze`) to resolve correctly. TypeScript, MIT. |
+| [awesome-ai-pulse-georgia](https://github.com/tornikebolokadze1-cyber/awesome-ai-pulse-georgia) | 130 | The sister list of this one, and a queryable tool rather than just a page: 300 curated AI agent frameworks, coding agents, and automation resources, every entry described in Georgian rather than copied from its README. It ships an MCP server and an `aipulse` CLI, so you can ask which repo fits a job in natural language from inside Claude Code, Cursor, Codex, or any MCP client — instead of scrolling a 280 KB README. Maintained by the same people who maintain this list. TypeScript, CC0. |
 
 ---
 
 ## 🌐 Web & Applications
 
 > Web apps, sites, frontend and backend projects, mobile applications.
-
-*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
-
----
-
-## 📦 Libraries & SDKs
-
-> Packages other developers pull into their own projects: npm, PyPI, crates.io, Maven, and the rest.
 
 *Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
 
