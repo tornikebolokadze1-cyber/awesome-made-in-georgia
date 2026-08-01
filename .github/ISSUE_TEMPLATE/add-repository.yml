@@ -1,0 +1,86 @@
+name: "🇬🇪 რეპოზიტორიის დამატება"
+description: "შემოგვთავაზე ქართველი დეველოპერის შექმნილი ღია კოდის პროექტი"
+title: "[Add] "
+labels: ["new-repo"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        გმადლობთ! სანამ შეავსებთ, გადახედეთ [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md)-ს — იქ წერია, რა ითვლება „ქართულად" და რა ხარისხის ზღვარი გვაქვს.
+
+  - type: input
+    id: repo-url
+    attributes:
+      label: რეპოზიტორიის ლინკი
+      placeholder: https://github.com/user/repo
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: კატეგორია
+      options:
+        - 🤖 AI აგენტები და ორკესტრაცია
+        - 🛠️ დეველოპერ ხელსაწყოები
+        - 🔤 ქართული ენა და NLP
+        - 🌐 ვები და აპლიკაციები
+        - 📦 ბიბლიოთეკები და SDK
+        - 🎮 თამაშები და გრაფიკა
+        - სხვა / არ ვიცი
+    validations:
+      required: true
+
+  - type: dropdown
+    id: georgian-criterion
+    attributes:
+      label: რატომ ითვლება ქართულად?
+      description: აირჩიე ის კრიტერიუმი, რომელიც ამ პროექტს შეესაბამება
+      options:
+        - ავტორი ან მთავარი მეინთეინერი ქართველია
+        - პროექტს ქართული კომპანია / გუნდი / უნივერსიტეტი აწარმოებს
+        - პროექტი ქართულ ენაზეა ორიენტირებული (NLP, შრიფტი, კლავიატურა და ა.შ.)
+    validations:
+      required: true
+
+  - type: input
+    id: proof
+    attributes:
+      label: დამადასტურებელი ლინკი
+      description: GitHub პროფილი, პირადი საიტი, LinkedIn ან სხვა საჯარო წყარო
+      placeholder: https://github.com/username
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: აღწერა ქართულად
+      description: 2-6 წინადადება — რას აკეთებს პროექტი და რატომ არის საინტერესო. ბოლოს მიუთითე ენა და ლიცენზია.
+      placeholder: |
+        მაგალითი: CLI ხელსაწყო, რომელიც ... . განსხვავებით სხვა მსგავსი ხელსაწყოებისგან,
+        ის ... . Python, MIT.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: შემოწმება
+      options:
+        - label: რეპო საჯაროა და აქვს README
+          required: true
+        - label: რეპოს აქვს ლიცენზია
+          required: true
+        - label: ეს არ არის tutorial-ის გამეორება ან სასწავლო კურსის შედეგი
+          required: true
+        - label: შევამოწმე, რომ ეს რეპო უკვე არ არის სიაში
+          required: true
+
+  - type: checkboxes
+    id: self-submission
+    attributes:
+      label: ეს შენი პროექტია?
+      options:
+        - label: დიახ, ეს ჩემი პროექტია (სრულიად წახალისებულია — უბრალოდ გვინდა ვიცოდეთ)
+          required: false
