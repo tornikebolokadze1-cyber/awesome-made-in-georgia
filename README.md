@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
-  <img src="https://img.shields.io/badge/repos-3-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
+  <img src="https://img.shields.io/badge/repos-4-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
   <img src="https://img.shields.io/badge/categories-6-A949DA?style=flat-square&labelColor=111827" alt="Categories"/>
   <img src="https://img.shields.io/badge/made_in-Sakartvelo_%F0%9F%87%AC%F0%9F%87%AA-00D0FF?style=flat-square&labelColor=111827" alt="Made in Sakartvelo"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-A949DA?style=flat-square&labelColor=111827" alt="PRs welcome"/></a>
@@ -62,6 +62,7 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 
 | Repository | ⭐ | Description |
 |---|---|---|
+| [awesome-ai-pulse-georgia](https://github.com/tornikebolokadze1-cyber/awesome-ai-pulse-georgia) | 130 | The sister list of this one, and a tool in its own right: 300 curated AI agent frameworks, coding agents, and automation resources, every entry described in Georgian rather than copied from its README. The collection ships as more than a page — an MCP server and an `aipulse` CLI let you query all 300 entries in natural language from inside Claude Code, Cursor, Codex, or any MCP client, so you can ask which repo fits the job instead of scrolling a 280 KB README. Maintained by the same people who maintain this list. TypeScript, CC0. |
 | [georgian-payments-skills](https://github.com/erekle1/georgian-payments-skills) | 9 | Drop-in skill packages that teach an AI coding assistant the Georgian banking APIs it has never seen: TBC Bank (Checkout, TPay, and the XML CHECK/PAY billing protocol) and Bank of Georgia (iPay, the installment calculator SDK, PSD2 Open Banking). Ask for a payment flow in plain language and the skill pulls in the matching auth flow, endpoints, error codes, and code samples — instead of you reading bank PDFs at 2am. Installs into Claude Code, Cursor, Windsurf, Copilot, Zed, and 37+ other agents with a single `npx skills add`. Python, MIT. |
 
 ---
