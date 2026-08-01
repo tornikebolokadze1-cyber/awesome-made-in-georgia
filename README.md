@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
-  <img src="https://img.shields.io/badge/repos-14-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
+  <img src="https://img.shields.io/badge/repos-15-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
   <img src="https://img.shields.io/badge/categories-7-A949DA?style=flat-square&labelColor=111827" alt="Categories"/>
   <img src="https://img.shields.io/badge/made_in-Sakartvelo_%F0%9F%87%AC%F0%9F%87%AA-00D0FF?style=flat-square&labelColor=111827" alt="Made in Sakartvelo"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-A949DA?style=flat-square&labelColor=111827" alt="PRs welcome"/></a>
@@ -111,6 +111,7 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 | Repository | ⭐ | Description |
 |---|---|---|
 | [KD-Waitlist-Notify](https://github.com/KhvichaDev/KD-Waitlist-Notify) | 4 | A WordPress waitlist and lead-capture plugin, written the way WordPress plugins usually are not: a feature-first directory layout, object-oriented throughout, a separate database layer, and controllers kept apart from the views instead of one thousand-line file. It collects signups ahead of a launch and notifies them in batches over email, Twilio SMS, or a custom HTTP gateway, with E.164 phone normalisation and GDPR handling built in rather than bolted on. PHP, GPL-2.0. |
+| [Democracy-Tools-of-Georgia](https://github.com/42prom/Democracy-Tools-of-Georgia) | 1 | A digital voting and referendum platform for Georgia, and unusually complete for a project this size: a Flutter mobile client, a Node/TypeScript backend, a separate Python biometric service, an edge-protection gateway, and Circom circuits all live in the one repository. Enrollment reads the chip inside an ePassport over NFC and matches a selfie against the ID photo with liveness checks; ballots are recorded into SHA-256 Merkle trees, and each voter receives an Ed25519-signed receipt they can verify independently — with nullifier hashing switchable between HMAC-SHA256 and Poseidon BN254 for a zero-knowledge path. Architecture documents, a privacy policy, and its own security-audit reports ship next to the code. TypeScript, Dart, and Python. |
 
 ---
 
