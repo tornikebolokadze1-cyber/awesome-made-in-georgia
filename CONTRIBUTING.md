@@ -1,83 +1,88 @@
-# წვლილის შეტანა
+# Contributing
 
-გმადლობთ, რომ გინდათ ამ სიის გაუმჯობესება. აქ წერია, რა კრიტერიუმებით ვირჩევთ რეპოზიტორიებს და როგორ დაამატოთ საკუთარი.
-
----
-
-## 1. რა ითვლება „ქართულად"
-
-ეს სია **წარმოშობით** არის აწყობილი და არა თემატიკით, ამიტომ კრიტერიუმი წინასწარ და მკაფიოდ უნდა იყოს ჩაწერილი — თორემ დროთა განმავლობაში სუბიექტურ კამათში გადაიზრდება.
-
-რეპოზიტორია მიიღება, თუ **სამიდან ერთი მაინც** სრულდება:
-
-1. **ავტორი ან მთავარი მეინთეინერი ქართველია.** დამადასტურებელი შეიძლება იყოს GitHub პროფილის ლოკაცია, ბიო, პირადი საიტი, LinkedIn ან სხვა საჯარო წყარო. მოქალაქეობა კი არა — კუთვნილება ითვლება: დიასპორაში მცხოვრები ქართველი დეველოპერიც შედის.
-2. **პროექტს ქართული კომპანია, გუნდი, უნივერსიტეტი ან საზოგადოება აწარმოებს** — მაშინაც კი, თუ კონტრიბუტორებს შორის უცხოელებიც არიან.
-3. **პროექტი ქართულ ენაზეა ორიენტირებული** — ქართული NLP, შრიფტი, კლავიატურა, transliteration, dataset, spell-checker. ამ შემთხვევაში ავტორის წარმოშობას მნიშვნელობა არ აქვს, რადგან ღირებულება ქართული ეკოსისტემისთვისაა.
-
-**რა არ ითვლება:** რეპო, რომელიც უბრალოდ საქართველოში დაიწერა, მაგრამ არც ავტორი, არც გუნდი და არც შინაარსი არ არის ქართულთან დაკავშირებული (მაგალითად, ციფრული მომთაბარის pet-project).
+Thanks for helping improve this list. Below are the criteria we use to select repositories and how to submit one.
 
 ---
 
-## 2. ხარისხის ზღვარი
+## 1. What counts as Georgian
 
-სია კურირებულია — ეს ნიშნავს, რომ ყველა რეპო არ შედის. მინიმალური მოთხოვნები:
+This list is organised by **origin rather than topic**, so the inclusion rule has to be written down up front — otherwise it degenerates into an argument about edge cases the moment one arrives.
 
-- რეპო **საჯაროა** და აქვს **README**, რომლიდანაც ცხადია, რას აკეთებს პროექტი
-- აქვს **ლიცენზია** (ლიცენზიის გარეშე კოდის გამოყენება სხვებს იურიდიულად არ შეუძლიათ)
-- პროექტი ან **აქტიურია**, ან **დასრულებული და გამოსადეგია** — მიტოვებული ნახევრად დაწერილი ექსპერიმენტი არ შედის
-- ეს არ არის **სასწავლო კურსის გავლის შედეგი** ან tutorial-ის გამეორება. `todo-app-react`, `my-first-portfolio` და მსგავსი პროექტები, სამწუხაროდ, არ ჯდება — ეს არაფერს ამბობს მათ ავტორზე, უბრალოდ სია სხვა დანიშნულებისაა
-- ვარსკვლავების რაოდენობას მნიშვნელობა **არ აქვს**. ახალი, კარგი პროექტი 0 ვარსკვლავითაც შედის
+A repository qualifies if **at least one** of the following is true:
+
+1. **The author or lead maintainer is Georgian.** A GitHub profile location, bio, personal site, LinkedIn, or any other public source is enough as evidence. This is about belonging, not citizenship — Georgian developers in the diaspora count.
+2. **A Georgian company, team, university, or community runs the project** — even if some of the contributors are not Georgian.
+3. **The project targets the Georgian language** — NLP, fonts, keyboard layouts, transliteration, datasets, spell checkers. Here the author's origin does not matter, because the value accrues to the Georgian ecosystem either way.
+
+**What does not count:** a repository that merely happens to have been written in Georgia while neither its author, its team, nor its subject has any connection to the country — a visiting digital nomad's side project, for instance.
 
 ---
 
-## 3. როგორ დავამატო რეპოზიტორია
+## 2. Quality bar
 
-### ვარიანტი A — Issue (უმარტივესი)
+This is a curated list, which means not everything gets in. The minimum requirements:
 
-გახსენი [ახალი issue](../../issues/new/choose) და შეავსე ფორმა. ჩვენ დანარჩენს თვითონ გავაკეთებთ.
+- The repository is **public** and has a **README** that makes clear what the project does
+- It has a **license** — without one, nobody else can legally use the code
+- The project is either **actively maintained** or **finished and genuinely useful**. Abandoned half-written experiments do not make it
+- It is not a **course exercise or a tutorial reproduction**. `todo-app-react` and `my-first-portfolio` do not fit — this says nothing about their authors, the list simply serves a different purpose
+- **Star count does not matter.** A good new project belongs here at zero stars
 
-### ვარიანტი B — Pull Request
+---
 
-1. Fork-ი გააკეთე ამ რეპოზიტორიაზე
-2. `README.md`-ში იპოვე შესაბამისი კატეგორია
-3. დაამატე სტრიქონი ცხრილში ამ ფორმატით:
+## 3. How to submit a repository
+
+### Option A — Issue (easiest)
+
+Open a [new issue](../../issues/new/choose) and fill in the form. We will take it from there.
+
+### Option B — Pull request
+
+1. Fork this repository
+2. Find the right category in `README.md`
+3. Add a row to the table in this format:
 
 ```markdown
-| [სახელი](https://github.com/user/repo) | ⭐ | ქართული აღწერა |
+| [Name](https://github.com/user/repo) | ⭐ | Description |
 ```
 
-4. **დაიცავი რიგი:** ცხრილში რეპოები ვარსკვლავების კლებადობით არიან დალაგებული
-5. გახსენი pull request და მოკლედ ახსენი, რატომ ჯდება პროექტი სიაში
+4. **Keep the order:** rows within each table are sorted by star count, descending
+5. Open a pull request and briefly explain why the project belongs here
 
 ---
 
-## 4. აღწერის წესები
+## 4. Writing the description
 
-აღწერა სიის ყველაზე ღირებული ნაწილია — სწორედ ის განასხვავებს კურირებულ სიას GitHub-ის ძებნისგან.
+The descriptions are the most valuable part of the list — they are what separates a curated list from a GitHub search.
 
-- **ქართულად წერე**, გამართული გრამატიკით
-- **2-6 წინადადება.** ერთსიტყვიანი აღწერა („AI ხელსაწყო") არაფერს ეუბნება მკითხველს
-- **ახსენი რას აკეთებს და რატომ არის საინტერესო** — არა მარტო რა ტექნოლოგიაა
-- **ტექნიკური ტერმინი დატოვე ინგლისურად**, მაგრამ პირველ ხსენებაზე ფრჩხილებში ახსენი: „plan-DAG (ისე დაშლილი ამოცანები, რომ ორი აგენტი ერთსა და იმავე ფაილს არ ეხება)"
-- **ბოლოს მიუთითე ენა და ლიცენზია:** „Python, MIT"
-- **არ გადაწერო README-დან marketing ტექსტი.** დაწერე ის, რაც მართალია
-
----
-
-## 5. რას ვამოწმებთ დამატებამდე
-
-ყოველი შემოთავაზება მიიღება მხოლოდ ამ შემოწმების შემდეგ:
-
-- ლინკი მუშაობს და რეპო საჯაროა
-- ავტორის „ქართულობა" საჯარო წყაროთი დასტურდება
-- ვარსკვლავების რაოდენობა README-ში სწორია
-- აღწერა ზუსტია — რეპოს README გადამოწმებულია და აღწერა არ ჰპირდება იმას, რასაც პროექტი არ აკეთებს
-- რეპო უკვე არ არის სიაში
+- **2–6 sentences.** A one-line description ("an AI tool") tells the reader nothing
+- **Explain what it does and why it is interesting**, not just which technologies it uses
+- **Gloss unusual technical terms on first use:** "a file-disjoint plan-DAG (work split so that no two agents ever touch the same file)"
+- **End with the language and license:** "Python, MIT"
+- **Do not paste marketing copy from the README.** Write what is actually true
 
 ---
 
-## 6. სხვა ცვლილებები
+## 5. What we check before merging
 
-არასწორი აღწერა, გატეხილი ლინკი, ორთოგრაფიული შეცდომა, ან რეპო, რომელიც არქივში გადავიდა — გახსენი issue ან პირდაპირ PR. მადლობელი ვიქნებით.
+Every submission goes through this before it lands:
 
-ახალი კატეგორიის შემოთავაზებაც შეიძლება, ოღონდ მხოლოდ მაშინ, თუ სულ მცირე **3 რეპო** გაქვს, რომელიც მასში ჯდება — თორემ სია ცარიელი სექციებით აივსება.
+- The link works and the repository is public
+- The Georgian connection is confirmed against a public source
+- The star count in the README is correct
+- The description is accurate — we read the repository's README and make sure the description does not promise something the project does not do
+- The repository is not already in the list
+
+---
+
+## 6. Other changes
+
+Wrong description, broken link, typo, or a repository that has since been archived? Open an issue or send a pull request directly. Much appreciated.
+
+New categories are welcome too, but only if you have at least **three repositories** that would go in one — otherwise the list fills up with empty sections.
+
+---
+
+## Language
+
+The list itself is written in English so that the work of Georgian developers is visible to everyone. Issues and pull requests are welcome in either English or Georgian — write whichever you are more comfortable in.

@@ -1,17 +1,19 @@
-name: "🇬🇪 რეპოზიტორიის დამატება"
-description: "შემოგვთავაზე ქართველი დეველოპერის შექმნილი ღია კოდის პროექტი"
+name: "🇬🇪 Add a repository"
+description: "Suggest an open source project built by a Georgian developer"
 title: "[Add] "
 labels: ["new-repo"]
 body:
   - type: markdown
     attributes:
       value: |
-        გმადლობთ! სანამ შეავსებთ, გადახედეთ [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md)-ს — იქ წერია, რა ითვლება „ქართულად" და რა ხარისხის ზღვარი გვაქვს.
+        Thanks! Before filling this in, have a look at [CONTRIBUTING.md](../blob/main/CONTRIBUTING.md) — it defines what counts as Georgian and what the quality bar is.
+
+        You are welcome to write the description in English or Georgian.
 
   - type: input
     id: repo-url
     attributes:
-      label: რეპოზიტორიის ლინკი
+      label: Repository URL
       placeholder: https://github.com/user/repo
     validations:
       required: true
@@ -19,35 +21,35 @@ body:
   - type: dropdown
     id: category
     attributes:
-      label: კატეგორია
+      label: Category
       options:
-        - 🤖 AI აგენტები და ორკესტრაცია
-        - 🛠️ დეველოპერ ხელსაწყოები
-        - 🔤 ქართული ენა და NLP
-        - 🌐 ვები და აპლიკაციები
-        - 📦 ბიბლიოთეკები და SDK
-        - 🎮 თამაშები და გრაფიკა
-        - სხვა / არ ვიცი
+        - 🤖 AI Agents & Orchestration
+        - 🛠️ Developer Tools
+        - 🔤 Georgian Language & NLP
+        - 🌐 Web & Applications
+        - 📦 Libraries & SDKs
+        - 🎮 Games & Graphics
+        - Other / not sure
     validations:
       required: true
 
   - type: dropdown
     id: georgian-criterion
     attributes:
-      label: რატომ ითვლება ქართულად?
-      description: აირჩიე ის კრიტერიუმი, რომელიც ამ პროექტს შეესაბამება
+      label: Why does this count as Georgian?
+      description: Pick the criterion this project meets
       options:
-        - ავტორი ან მთავარი მეინთეინერი ქართველია
-        - პროექტს ქართული კომპანია / გუნდი / უნივერსიტეტი აწარმოებს
-        - პროექტი ქართულ ენაზეა ორიენტირებული (NLP, შრიფტი, კლავიატურა და ა.შ.)
+        - The author or lead maintainer is Georgian
+        - A Georgian company / team / university runs it
+        - The project targets the Georgian language (NLP, fonts, keyboards, etc.)
     validations:
       required: true
 
   - type: input
     id: proof
     attributes:
-      label: დამადასტურებელი ლინკი
-      description: GitHub პროფილი, პირადი საიტი, LinkedIn ან სხვა საჯარო წყარო
+      label: Supporting link
+      description: GitHub profile, personal site, LinkedIn, or any other public source
       placeholder: https://github.com/username
     validations:
       required: true
@@ -55,32 +57,31 @@ body:
   - type: textarea
     id: description
     attributes:
-      label: აღწერა ქართულად
-      description: 2-6 წინადადება — რას აკეთებს პროექტი და რატომ არის საინტერესო. ბოლოს მიუთითე ენა და ლიცენზია.
+      label: Description
+      description: 2–6 sentences on what the project does and why it is interesting. End with the language and license.
       placeholder: |
-        მაგალითი: CLI ხელსაწყო, რომელიც ... . განსხვავებით სხვა მსგავსი ხელსაწყოებისგან,
-        ის ... . Python, MIT.
+        Example: A CLI tool that ... . Unlike similar tools it ... . Python, MIT.
     validations:
       required: true
 
   - type: checkboxes
     id: checks
     attributes:
-      label: შემოწმება
+      label: Checklist
       options:
-        - label: რეპო საჯაროა და აქვს README
+        - label: The repository is public and has a README
           required: true
-        - label: რეპოს აქვს ლიცენზია
+        - label: The repository has a license
           required: true
-        - label: ეს არ არის tutorial-ის გამეორება ან სასწავლო კურსის შედეგი
+        - label: This is not a tutorial reproduction or a course exercise
           required: true
-        - label: შევამოწმე, რომ ეს რეპო უკვე არ არის სიაში
+        - label: I checked that it is not already in the list
           required: true
 
   - type: checkboxes
     id: self-submission
     attributes:
-      label: ეს შენი პროექტია?
+      label: Is this your own project?
       options:
-        - label: დიახ, ეს ჩემი პროექტია (სრულიად წახალისებულია — უბრალოდ გვინდა ვიცოდეთ)
+        - label: Yes, this is mine (entirely welcome — we just like to know)
           required: false

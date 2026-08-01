@@ -1,128 +1,176 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="320" viewBox="0 0 900 320">
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="460" viewBox="0 0 1200 460">
+  <!--
+    Cover art. Every shape is an explicit primitive: GitHub sanitises SVGs served
+    from a repository, so no <use>, no <style>, no external font, no blend modes.
+    Composition, back to front: sky gradient -> atmospheric glow -> star field ->
+    five-cross constellation -> anamorphic streak -> three mountain ridges with
+    aerial perspective -> type -> vignette -> film grain.
+  -->
   <defs>
-    <!-- Brand gradient: dark navy bg (shared with awesome-ai-pulse-georgia) -->
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#111827"/>
-      <stop offset="100%" style="stop-color:#172030"/>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#04060C"/>
+      <stop offset="45%" stop-color="#080E1C"/>
+      <stop offset="100%" stop-color="#0E1729"/>
     </linearGradient>
-    <!-- Brand accent gradient: cyan to purple -->
+
+    <radialGradient id="horizonGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#00D0FF" stop-opacity="0.34"/>
+      <stop offset="55%" stop-color="#00A2D8" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#00D0FF" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="purpleHaze" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#A949DA" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#A949DA" stop-opacity="0"/>
+    </radialGradient>
+
     <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00D0FF"/>
-      <stop offset="100%" style="stop-color:#A949DA"/>
+      <stop offset="0%" stop-color="#00D0FF"/>
+      <stop offset="100%" stop-color="#A949DA"/>
     </linearGradient>
-    <linearGradient id="accent135" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#00D0FF"/>
-      <stop offset="100%" style="stop-color:#A949DA"/>
+
+    <linearGradient id="titleFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#C7D6E8"/>
     </linearGradient>
-    <filter id="text-shadow">
-      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+
+    <linearGradient id="streak" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D0FF" stop-opacity="0"/>
+      <stop offset="35%" stop-color="#8FE6FF" stop-opacity="0.55"/>
+      <stop offset="62%" stop-color="#C9A7FF" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#A949DA" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="ridgeLight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D0FF" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#7FE3FF" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#C4A2FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#A949DA" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="vignette" cx="50%" cy="46%" r="72%">
+      <stop offset="55%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.72"/>
+    </radialGradient>
+
+    <filter id="softBlur" x="-40%" y="-200%" width="180%" height="500%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+    <filter id="wideBlur" x="-30%" y="-120%" width="160%" height="340%">
+      <feGaussianBlur stdDeviation="16"/>
+    </filter>
+    <filter id="tinyGlow" x="-300%" y="-300%" width="700%" height="700%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="titleGlow" x="-25%" y="-90%" width="150%" height="320%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feFlood flood-color="#0088C4" flood-opacity="0.55" result="c"/>
+      <feComposite in="c" in2="b" operator="in" result="s"/>
+      <feMerge>
+        <feMergeNode in="s"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
     </filter>
   </defs>
 
+  <!-- Sky -->
+  <rect width="1200" height="460" fill="url(#sky)" rx="14"/>
+
+  <!-- Atmospheric light pooling behind the range and off to the right -->
+  <ellipse cx="560" cy="352" rx="520" ry="150" fill="url(#horizonGlow)"/>
+  <ellipse cx="1010" cy="180" rx="300" ry="210" fill="url(#purpleHaze)"/>
+
+  <!-- Star field -->
+  <g fill="#DCEBFF">
+    <circle cx="118" cy="66" r="1.3" opacity="0.55"/>
+    <circle cx="205" cy="122" r="0.9" opacity="0.35"/>
+    <circle cx="291" cy="52" r="1.1" opacity="0.45"/>
+    <circle cx="372" cy="105" r="0.8" opacity="0.28"/>
+    <circle cx="455" cy="61" r="1.4" opacity="0.6"/>
+    <circle cx="534" cy="132" r="0.9" opacity="0.3"/>
+    <circle cx="618" cy="45" r="1"   opacity="0.4"/>
+    <circle cx="702" cy="118" r="1.2" opacity="0.5"/>
+    <circle cx="781" cy="70" r="0.85" opacity="0.32"/>
+    <circle cx="862" cy="138" r="1.1" opacity="0.42"/>
+    <circle cx="1096" cy="58" r="1.2" opacity="0.5"/>
+    <circle cx="1152" cy="128" r="0.9" opacity="0.33"/>
+    <circle cx="64"  cy="158" r="1"   opacity="0.36"/>
+    <circle cx="248" cy="196" r="0.8" opacity="0.26"/>
+    <circle cx="948" cy="210" r="0.9" opacity="0.3"/>
+  </g>
+
+  <!-- The five-cross flag of Georgia, drawn as a constellation -->
+  <g transform="translate(992,112)">
+    <g stroke="#8FE6FF" stroke-opacity="0.22" stroke-width="1">
+      <line x1="0" y1="-62" x2="0" y2="62"/>
+      <line x1="-78" y1="0" x2="78" y2="0"/>
+    </g>
+    <g fill="#BFEFFF" filter="url(#tinyGlow)">
+      <circle cx="0" cy="0" r="2.8"/>
+      <circle cx="-42" cy="-32" r="2"/>
+      <circle cx="42" cy="-32" r="2"/>
+      <circle cx="-42" cy="32" r="2"/>
+      <circle cx="42" cy="32" r="2"/>
+    </g>
+    <g fill="#FFFFFF">
+      <circle cx="0" cy="0" r="1.5"/>
+      <circle cx="-42" cy="-32" r="1.1"/>
+      <circle cx="42" cy="-32" r="1.1"/>
+      <circle cx="-42" cy="32" r="1.1"/>
+      <circle cx="42" cy="32" r="1.1"/>
+    </g>
+  </g>
+
+  <!-- Anamorphic light streak behind the wordmark -->
+  <rect x="120" y="222" width="960" height="3" fill="url(#streak)" filter="url(#wideBlur)" opacity="0.85"/>
+
   <!--
-    Bolnisi cross (the five-cross motif of the Georgian flag) is drawn as an explicit
-    <path> everywhere rather than <defs> + <use>. GitHub sanitises SVGs it serves from a
-    repository and <use> references are not reliably preserved, so inlining keeps the
-    banner rendering identically on GitHub, on the site and in local previews.
-    Path geometry: 20x20 box centred on 0,0.
+    Caucasus range: three ridges lightening toward the back (aerial perspective).
+    Peak heights and slope lengths are deliberately irregular — evenly spaced
+    triangles of equal height read as a chart, not as mountains.
   -->
+  <path d="M 0,405 L 68,352 L 118,378 L 196,300 L 250,341 L 318,368 L 392,317 L 452,357 L 520,330 L 596,387 L 664,325 L 742,364 L 800,341 L 878,393 L 946,335 L 1020,371 L 1086,344 L 1148,383 L 1200,357 L 1200,460 L 0,460 Z"
+        fill="#1D2B47" opacity="0.72"/>
+  <path d="M 0,405 L 68,352 L 118,378 L 196,300 L 250,341 L 318,368 L 392,317 L 452,357 L 520,330 L 596,387 L 664,325 L 742,364 L 800,341 L 878,393 L 946,335 L 1020,371 L 1086,344 L 1148,383 L 1200,357"
+        fill="none" stroke="url(#ridgeLight)" stroke-width="1.3"/>
 
-  <!-- Background -->
-  <rect width="900" height="320" fill="url(#bg)" rx="12"/>
+  <path d="M 0,428 L 84,389 L 148,413 L 226,361 L 300,399 L 372,377 L 448,415 L 528,371 L 604,407 L 690,375 L 764,413 L 846,381 L 922,417 L 1008,387 L 1090,419 L 1160,395 L 1200,411 L 1200,460 L 0,460 Z"
+        fill="#131E36" opacity="0.88"/>
+  <path d="M 0,428 L 84,389 L 148,413 L 226,361 L 300,399 L 372,377 L 448,415 L 528,371 L 604,407 L 690,375 L 764,413 L 846,381 L 922,417 L 1008,387 L 1090,419 L 1160,395 L 1200,411"
+        fill="none" stroke="#7FE3FF" stroke-opacity="0.18" stroke-width="1"/>
 
-  <!-- Grid pattern (matching the sister list) -->
-  <g opacity="0.06">
-    <line x1="0" y1="40" x2="900" y2="40" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="0" y1="80" x2="900" y2="80" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="0" y1="120" x2="900" y2="120" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="0" y1="160" x2="900" y2="160" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="0" y1="200" x2="900" y2="200" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="0" y1="240" x2="900" y2="240" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="0" y1="280" x2="900" y2="280" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="100" y1="0" x2="100" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="200" y1="0" x2="200" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="300" y1="0" x2="300" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="400" y1="0" x2="400" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="500" y1="0" x2="500" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="600" y1="0" x2="600" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="700" y1="0" x2="700" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-    <line x1="800" y1="0" x2="800" y2="320" stroke="#00CFFF" stroke-width="0.5"/>
-  </g>
+  <path d="M 0,450 L 110,417 L 210,443 L 316,409 L 430,441 L 548,415 L 664,445 L 784,419 L 900,447 L 1024,423 L 1140,449 L 1200,435 L 1200,460 L 0,460 Z"
+        fill="#060A14"/>
 
-  <!-- Decorative glow circles -->
-  <circle cx="755" cy="130" r="105" fill="none" stroke="#A949DA" stroke-width="1" opacity="0.12"/>
-  <circle cx="755" cy="130" r="150" fill="none" stroke="#00D0FF" stroke-width="0.5" opacity="0.07"/>
-  <circle cx="130" cy="272" r="70" fill="none" stroke="#A949DA" stroke-width="0.8" opacity="0.08"/>
-
-  <!-- Georgian five-cross flag motif, rendered in brand colours -->
-  <g>
-    <!-- large cross: kept low so it reads as background texture, not a foreground shape -->
-    <g opacity="0.11">
-      <rect x="747" y="62" width="17" height="136" rx="1" fill="#00D0FF"/>
-      <rect x="672" y="121" width="167" height="17" rx="1" fill="#00D0FF"/>
-    </g>
-  </g>
-  <!-- four Bolnisi crosses in the quadrants, brighter so the five-cross pattern is legible -->
-  <g opacity="0.3">
-    <path d="M -4,-10 L 4,-10 L 3,-3 L 10,-4 L 10,4 L 3,3 L 4,10 L -4,10 L -3,3 L -10,4 L -10,-4 L -3,-3 Z" transform="translate(709,92) scale(0.62)" fill="#A949DA"/>
-    <path d="M -4,-10 L 4,-10 L 3,-3 L 10,-4 L 10,4 L 3,3 L 4,10 L -4,10 L -3,3 L -10,4 L -10,-4 L -3,-3 Z" transform="translate(802,92) scale(0.62)" fill="#A949DA"/>
-    <path d="M -4,-10 L 4,-10 L 3,-3 L 10,-4 L 10,4 L 3,3 L 4,10 L -4,10 L -3,3 L -10,4 L -10,-4 L -3,-3 Z" transform="translate(709,168) scale(0.62)" fill="#A949DA"/>
-    <path d="M -4,-10 L 4,-10 L 3,-3 L 10,-4 L 10,4 L 3,3 L 4,10 L -4,10 L -3,3 L -10,4 L -10,-4 L -3,-3 Z" transform="translate(802,168) scale(0.62)" fill="#A949DA"/>
-  </g>
-
-  <!-- Code brackets (signature element: this list is about source code) -->
-  <g transform="translate(58, 92)" opacity="0.9">
-    <path d="M 26,0 L 8,0 L 8,72 L 26,72" fill="none" stroke="url(#accent135)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M 62,0 L 80,0 L 80,72 L 62,72" fill="none" stroke="url(#accent135)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M -4,-10 L 4,-10 L 3,-3 L 10,-4 L 10,4 L 3,3 L 4,10 L -4,10 L -3,3 L -10,4 L -10,-4 L -3,-3 Z" transform="translate(44,36) scale(1.15)" fill="url(#accent)"/>
-  </g>
-
-  <!-- Main title: MADE IN -->
-  <text x="180" y="118" font-family="'Segoe UI', 'SF Pro Display', Arial, sans-serif" font-size="50" font-weight="800" fill="url(#accent)" filter="url(#text-shadow)" letter-spacing="2">
-    MADE IN
-  </text>
-  <!-- GEORGIA -->
-  <text x="180" y="172" font-family="'Segoe UI', 'SF Pro Display', Arial, sans-serif" font-size="50" font-weight="800" fill="#FAFAFA" filter="url(#text-shadow)" letter-spacing="3">
-    GEORGIA
+  <!-- Wordmark -->
+  <text x="600" y="176" text-anchor="middle" font-family="'Segoe UI', 'SF Pro Display', Helvetica, Arial, sans-serif"
+        font-size="14" font-weight="600" fill="#6FD8F5" opacity="0.8" letter-spacing="7">
+    AWESOME · OPEN SOURCE
   </text>
 
-  <!-- Tagline -->
-  <text x="180" y="208" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#B3B3B3" letter-spacing="0.5">
-    ქართველი დეველოპერების შექმნილი ღია კოდის კურირებული კოლექცია
+  <text x="600" y="252" text-anchor="middle" font-family="'Segoe UI', 'SF Pro Display', Helvetica, Arial, sans-serif"
+        font-size="70" font-weight="800" fill="url(#titleFill)" filter="url(#titleGlow)" letter-spacing="3">
+    MADE IN GEORGIA
   </text>
 
-  <!-- Accent line under tagline -->
-  <rect x="180" y="220" width="120" height="2" rx="1" fill="url(#accent)" opacity="0.6"/>
+  <rect x="540" y="272" width="120" height="2" rx="1" fill="url(#accent)" opacity="0.85"/>
+  <rect x="540" y="272" width="120" height="2" rx="1" fill="url(#accent)" opacity="0.5" filter="url(#softBlur)"/>
 
-  <!-- Bottom bar -->
-  <rect x="0" y="260" width="900" height="60" fill="#111827" fill-opacity="0.7"/>
-  <rect x="0" y="260" width="900" height="1" fill="url(#accent)" opacity="0.2"/>
+  <text x="600" y="306" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="16.5" fill="#9DB2CC" letter-spacing="0.4">
+    Open source built in Sakartvelo — the country in the Caucasus
+  </text>
 
-  <!-- Bottom stats -->
-  <g font-family="'Segoe UI', Arial, sans-serif" font-size="13">
-    <text x="80" y="296" text-anchor="middle">
-      <tspan fill="#00D0FF" font-weight="700" font-size="20">2</tspan>
-      <tspan dx="6" fill="#B3B3B3">რეპო</tspan>
-    </text>
-    <text x="220" y="296" text-anchor="middle">
-      <tspan fill="#A949DA" font-weight="700" font-size="20">6</tspan>
-      <tspan dx="6" fill="#B3B3B3">კატეგორია</tspan>
-    </text>
-    <g transform="translate(380, 283)">
-      <rect x="0" y="0" width="108" height="24" rx="12" fill="rgba(0,208,255,0.15)" stroke="#00D0FF" stroke-width="0.5"/>
-      <text x="54" y="16" text-anchor="middle" fill="#00D0FF" font-size="11" font-weight="600">Open Source</text>
-    </g>
-    <g transform="translate(498, 283)">
-      <rect x="0" y="0" width="96" height="24" rx="12" fill="rgba(169,73,218,0.15)" stroke="#A949DA" stroke-width="0.5"/>
-      <text x="48" y="16" text-anchor="middle" fill="#A949DA" font-size="11" font-weight="600">Sakartvelo</text>
-    </g>
-    <g transform="translate(604, 283)">
-      <rect x="0" y="0" width="88" height="24" rx="12" fill="rgba(0,208,255,0.15)" stroke="#00D0FF" stroke-width="0.5"/>
-      <text x="44" y="16" text-anchor="middle" fill="#00D0FF" font-size="11" font-weight="600">ქართული</text>
-    </g>
-    <text x="790" y="296" text-anchor="middle" fill="#B3B3B3" font-size="12">
-      <tspan fill="#00D0FF">&#9733;</tspan>
-      <tspan dx="4" fill="#FAFAFA" font-weight="600">aipulsegeorgia.ge</tspan>
-    </text>
-  </g>
+  <text x="600" y="438" text-anchor="middle" font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="11.5" fill="#7C93AF" opacity="0.75" letter-spacing="4">
+    CURATED BY AI PULSE GEORGIA
+  </text>
+
+  <!-- Vignette + film grain -->
+  <rect width="1200" height="460" fill="url(#vignette)" rx="14"/>
+  <rect width="1200" height="460" filter="url(#grain)" opacity="0.055" rx="14"/>
 </svg>

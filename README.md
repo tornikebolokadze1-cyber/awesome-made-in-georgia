@@ -5,8 +5,8 @@
 <h1 align="center">Awesome Made in Georgia</h1>
 
 <p align="center">
-  <b>ქართველი დეველოპერების შექმნილი ღია კოდის კურირებული კოლექცია</b><br/>
-  შერჩეული <a href="https://aipulsegeorgia.ge">AI Pulse Georgia</a>-ს მიერ
+  <b>A curated list of open source software built by Georgian developers</b><br/>
+  Maintained by <a href="https://aipulsegeorgia.ge">AI Pulse Georgia</a>
 </p>
 
 <p align="center">
@@ -18,104 +18,104 @@
   <a href="https://aipulsegeorgia.ge"><img src="https://img.shields.io/badge/aipulsegeorgia.ge-website-A949DA?style=flat-square&labelColor=111827" alt="Website"/></a>
 </p>
 
-<p align="center"><i>A curated list of open source software built by Georgian developers — from Sakartvelo 🇬🇪, the country in the Caucasus (not the US state).</i></p>
+<p align="center"><i>Georgia here means Sakartvelo 🇬🇪 — the country in the Caucasus, not the US state.</i></p>
 
 ---
 
-## 🇬🇪 რა არის ეს სია
+## About this list
 
-ქართველი დეველოპერები კარგ ღია კოდს წერენ, მაგრამ ეს კოდი GitHub-ის მილიონობით რეპოზიტორიაში იკარგება — არსად არსებობს ერთი ადგილი, სადაც ნახავ, რას აშენებენ საქართველოში. ეს სია ზუსტად ამას აკეთებს.
+Georgian developers write good open source, but it disappears into GitHub's millions of repositories. There has never been a single place to see what is being built in Sakartvelo. This list is that place.
 
-განსხვავებით უმეტესი awesome-სიისგან, ეს კოლექცია **თემატურად** კი არა, **წარმოშობით** არის აწყობილი. აქ არ არის მნიშვნელოვანი, რეპო AI-ზეა, ვებზე თუ თამაშზე — მნიშვნელოვანია, რომ მას ქართველმა შექმნა.
+Unlike most awesome lists, this one is organised by **origin rather than topic**. It does not matter whether a project is about AI, the web, or games — what matters is that a Georgian built it.
 
-> **დაკავშირებული სია:** [Awesome AI Pulse Georgia](https://github.com/tornikebolokadze1-cyber/awesome-ai-pulse-georgia) — 300 საერთაშორისო AI და დეველოპერ ხელსაწყო, ქართული აღწერებით. ეს სია მისი დაა: იქ ვირჩევთ *საუკეთესოს მსოფლიოდან*, აქ ვაჩვენებთ *ჩვენსას*.
+> **Sister list:** [Awesome AI Pulse Georgia](https://github.com/tornikebolokadze1-cyber/awesome-ai-pulse-georgia) — 300 international AI and developer tools, described in Georgian. The two lists point in opposite directions: that one curates *the best of the world* for a Georgian audience, this one shows *what Georgia builds* to everyone else.
 
-**რას ნიშნავს „ქართული"** — ზუსტი კრიტერიუმი და დამატების წესები: [CONTRIBUTING.md](CONTRIBUTING.md)
-
----
-
-## შინაარსი
-
-- [🤖 AI აგენტები და ორკესტრაცია](#-ai-აგენტები-და-ორკესტრაცია)
-- [🛠️ დეველოპერ ხელსაწყოები](#️-დეველოპერ-ხელსაწყოები)
-- [🔤 ქართული ენა და NLP](#-ქართული-ენა-და-nlp)
-- [🌐 ვები და აპლიკაციები](#-ვები-და-აპლიკაციები)
-- [📦 ბიბლიოთეკები და SDK](#-ბიბლიოთეკები-და-sdk)
-- [🎮 თამაშები და გრაფიკა](#-თამაშები-და-გრაფიკა)
+**What counts as Georgian** — the exact criteria and submission rules live in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
-## 🤖 AI აგენტები და ორკესტრაცია
+## Contents
 
-> **AI Agents & Orchestration** — სისტემები, რომლებიც AI მოდელებს ერთმანეთთან და შენს კოდთან ამუშავებენ: აგენტების მართვა, დავალებების განაწილება, კონტექსტის შენახვა და შედეგის შემოწმება.
+- [🤖 AI Agents & Orchestration](#-ai-agents--orchestration)
+- [🛠️ Developer Tools](#️-developer-tools)
+- [🔤 Georgian Language & NLP](#-georgian-language--nlp)
+- [🌐 Web & Applications](#-web--applications)
+- [📦 Libraries & SDKs](#-libraries--sdks)
+- [🎮 Games & Graphics](#-games--graphics)
 
-| რეპოზიტორია | ⭐ | აღწერა |
+---
+
+## 🤖 AI Agents & Orchestration
+
+> Systems that put AI models to work on real codebases: agent orchestration, task routing, durable context, and verification of what the model produced.
+
+| Repository | ⭐ | Description |
 |---|---|---|
-| [kimi-atlas](https://github.com/null0xxx/kimi-atlas) | 13 | მრავალაგენტიანი ორკესტრატორი Kimi Code-ისთვის, 115 ჩაშენებული ოფიციალური skill-პაკეტით. მთავარი პრინციპი ისაა, რომ „გავიდა თუ ჩავარდა" გადაწყვეტილებას **არასოდეს იღებს LLM** — მას დეტერმინისტული (ყოველთვის ერთნაირად მომუშავე) 6-ლინზიანი შემოწმების ჰარნესი წყვეტს. ბირთვი `atlas` ერთ ცვლილებას ატარებს მკაფიო მდგომარეობათა მანქანაში `INIT → … → OUTPUT`, `ATLAS-WEAVE` კი დიდ ცვლილებას file-disjoint plan-DAG-ად შლის (ისე დაშლილი ამოცანები, რომ ორი აგენტი ერთსა და იმავე ფაილს არ ეხება) და ერთდროულად მაქსიმუმ 3 აგენტს უშვებს. აქვს ცოცხალი ContextGraph — გაშვების მდგომარეობის რუკა, რომელიც კოდერს ყოველ გადამოწმებაზე ხელახლა მიეწოდება — და forward-only rollback იზოლირებულ worktree-ში, ანუ შენს რეალურ ფაილებს არასოდეს ეხება. Python, MIT. |
-| [AIWorkHub](https://github.com/shrec/AIWorkHub) | 2 | VS Code-ისთვის შექმნილი local-first control plane, რომელიც თითოეულ Git რეპოზიტორიას იზოლირებულ AI-სამუშაო სივრცედ აქცევს. აერთიანებს VS Code-ში უკვე ხელმისაწვდომ მოდელებს (Codex, Claude, DeepSeek, GLM, Copilot) რეპოზიტორიაზე მიბმულ დავალებების რიგთან, Source Graph-თან (კოდის სტრუქტურული რუკა), სესიების მენეჯერთან, AI-მეხსიერებასთან და review inbox-თან. არც ღრუბლოვანი ანგარიში სჭირდება და არც HTTP სერვისი — ყველაფერი ლოკალურად მუშაობს და არსებული CLI-ების ავტორიზაციას იყენებს, პაროლებს არსად აკოპირებს. ორი მთავარი იდეა: აგენტი კონტექსტს Source Graph-იდან იღებს და არა კოდის ხელახალი სკანირებით (ტოკენების დაზოგვა), ცვლილება კი მხოლოდ მაშინ მიიღება, როცა მტკიცებულება შემოწმებას გაივლის. Python + VS Code extension, MIT. |
+| [kimi-atlas](https://github.com/null0xxx/kimi-atlas) | 13 | A many-agent orchestrator for Kimi Code that ships with 115 vendored official skill packages. Its central claim is that **no LLM ever computes pass/fail** — that decision belongs to a deterministic six-lens verification harness with pure gates. The `atlas` core drives a single change through an explicit `INIT → … → OUTPUT` state machine; `ATLAS-WEAVE` decomposes a larger change into a file-disjoint plan-DAG (work split so that no two agents ever touch the same file), drains it with at most three concurrent agents, and merges through a combined-tree differential gate — degrading byte-identically to a single `atlas` run when the work does not decompose. Carries a live ContextGraph recomputed on every refine pass and two-phase forward-only rollback confined to an isolated worktree, so your real tree is never touched. Python, MIT. |
+| [AIWorkHub](https://github.com/shrec/AIWorkHub) | 2 | A local-first control plane for VS Code that turns each Git repository into an isolated AI engineering workspace. It wires the models already available in your editor (Codex, Claude, DeepSeek, GLM, Copilot) to a repository-scoped task queue, a Source Graph, a session manager, durable AI memory, and a review inbox. No cloud account and no HTTP service are required, and it reuses each CLI's existing login rather than copying credentials anywhere. Two ideas carry the design: agents query the structural Source Graph instead of rescanning the tree (spending far less context), and changes are accepted only once the evidence passes. Python + VS Code extension, MIT. |
 
 ---
 
-## 🛠️ დეველოპერ ხელსაწყოები
+## 🛠️ Developer Tools
 
-> **Developer Tools** — CLI-ები, ავტომატიზაცია, build-ხელსაწყოები, DevOps და ყველაფერი, რაც დეველოპერს ყოველდღიურ სამუშაოს უადვილებს.
+> CLIs, automation, build tooling, DevOps — anything that makes a developer's day shorter.
 
-*ჯერ ცარიელია — შენი რეპო შეიძლება პირველი გახდეს. [დაამატე →](CONTRIBUTING.md)*
-
----
-
-## 🔤 ქართული ენა და NLP
-
-> **Georgian Language & NLP** — ქართული ენის ტექნოლოგიური ხელსაწყოები: NLP მოდელები, შრიფტები, კლავიატურები, transliteration, TTS/STT, spell-checker-ები და dataset-ები.
-
-*ჯერ ცარიელია — შენი რეპო შეიძლება პირველი გახდეს. [დაამატე →](CONTRIBUTING.md)*
+*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
 
 ---
 
-## 🌐 ვები და აპლიკაციები
+## 🔤 Georgian Language & NLP
 
-> **Web & Applications** — ვებ-აპლიკაციები, საიტები, frontend და backend პროექტები, მობაილური აპები.
+> Technology for the Georgian language: NLP models, fonts, keyboard layouts, transliteration, TTS/STT, spell checkers, and datasets.
 
-*ჯერ ცარიელია — შენი რეპო შეიძლება პირველი გახდეს. [დაამატე →](CONTRIBUTING.md)*
-
----
-
-## 📦 ბიბლიოთეკები და SDK
-
-> **Libraries & SDKs** — პაკეტები, რომლებსაც სხვა დეველოპერები საკუთარ პროექტებში იყენებენ: npm, PyPI, crates.io, Maven და სხვა.
-
-*ჯერ ცარიელია — შენი რეპო შეიძლება პირველი გახდეს. [დაამატე →](CONTRIBUTING.md)*
+*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
 
 ---
 
-## 🎮 თამაშები და გრაფიკა
+## 🌐 Web & Applications
 
-> **Games & Graphics** — თამაშები, გრაფიკული ძრავები, კრეატიული კოდი და ვიზუალიზაცია.
+> Web apps, sites, frontend and backend projects, mobile applications.
 
-*ჯერ ცარიელია — შენი რეპო შეიძლება პირველი გახდეს. [დაამატე →](CONTRIBUTING.md)*
+*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
 
 ---
 
-## ჩვენს შესახებ
+## 📦 Libraries & SDKs
+
+> Packages other developers pull into their own projects: npm, PyPI, crates.io, Maven, and the rest.
+
+*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
+
+---
+
+## 🎮 Games & Graphics
+
+> Games, graphics engines, creative coding, and visualisation.
+
+*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
+
+---
+
+## About
 
 <p align="center">
   <a href="https://aipulsegeorgia.ge"><img src="https://img.shields.io/badge/AI_Pulse_Georgia-2026-00D0FF?style=for-the-badge&labelColor=111827" alt="AI Pulse Georgia 2026"/></a>
 </p>
 
-ეს სია იმართება **[AI Pulse Georgia](https://aipulsegeorgia.ge)**-ს მიერ — საზოგადოება, რომელიც ფოკუსირებულია AI აგენტებზე, ავტომატიზაციაზე და ავტონომიური სისტემების მომავალზე.
+This list is maintained by **[AI Pulse Georgia](https://aipulsegeorgia.ge)** — a community focused on AI agents, automation, and the future of autonomous systems.
 
-> *„Exploring Georgia's AI Future"*
+> *"Exploring Georgia's AI Future"*
 
-თუ ქართულ ღია კოდს აშენებ ან უბრალოდ გინდა, რომ ის უფრო ხილული გახდეს — მიეცი ვარსკვლავი და გაუზიარე სხვებს.
+If you build Georgian open source, or you simply want it to be more visible, star the list and pass it on.
 
-## წვლილის შეტანა
+## Contributing
 
-იცნობ ქართველი დეველოპერის შექმნილ კარგ რეპოზიტორიას? ან შენი გაქვს? გახსენი issue ან გამოაგზავნე pull request — სრული წესები და „ქართულობის" კრიტერიუმი აქ არის: **[CONTRIBUTING.md](CONTRIBUTING.md)**
+Know a good repository built by a Georgian developer? Have one of your own? Open an issue or send a pull request — the full rules and the "what counts as Georgian" criteria are in **[CONTRIBUTING.md](CONTRIBUTING.md)**.
 
-საკუთარი პროექტის დამატება წახალისებულია. ეს არ არის თავმოწონება — სია მხოლოდ მაშინ იმუშავებს, თუ ავტორები თავად შემოიტანენ თავიანთ სამუშაოს.
+Submitting your own project is encouraged. This is not self-promotion: a list organised by authorship only works if the authors bring their own work to it.
 
-## ლიცენზია
+## License
 
 [![CC0](https://licensebuttons.net/p/zero/1.0/88x31.png)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-სია გავრცელებულია [CC0 1.0 Universal](LICENSE) ლიცენზიით. ჩამოთვლილი რეპოზიტორიები საკუთარ ლიცენზიებს ინარჩუნებენ.
+The list is released under [CC0 1.0 Universal](LICENSE). Every repository listed keeps its own license.
