@@ -11,7 +11,7 @@
 
 <p align="center">
   <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
-  <img src="https://img.shields.io/badge/repos-2-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
+  <img src="https://img.shields.io/badge/repos-4-00D0FF?style=flat-square&labelColor=111827" alt="Repos"/>
   <img src="https://img.shields.io/badge/categories-6-A949DA?style=flat-square&labelColor=111827" alt="Categories"/>
   <img src="https://img.shields.io/badge/made_in-Sakartvelo_%F0%9F%87%AC%F0%9F%87%AA-00D0FF?style=flat-square&labelColor=111827" alt="Made in Sakartvelo"/>
   <a href="CONTRIBUTING.md"><img src="https://img.shields.io/badge/PRs-welcome-A949DA?style=flat-square&labelColor=111827" alt="PRs welcome"/></a>
@@ -60,7 +60,10 @@ Unlike most awesome lists, this one is organised by **origin rather than topic**
 
 > CLIs, automation, build tooling, DevOps — anything that makes a developer's day shorter.
 
-*Empty for now. Yours could be the first one here. [Submit it →](CONTRIBUTING.md)*
+| Repository | ⭐ | Description |
+|---|---|---|
+| [claude-code-setup](https://github.com/tornikebolokadze1-cyber/claude-code-setup) | 13 | A one-command setup that turns a fresh repository into a governed Claude Code project: 17 rules, 7 hooks, 7 templates, and a `/setup` command that wires in security guardrails, automated testing, CI/CD, and secret protection from the first commit. Built for people who use AI coding agents daily and would rather install their guardrails once than re-decide them on every new project. TypeScript, MIT. |
+| [georgian-payments-skills](https://github.com/erekle1/georgian-payments-skills) | 9 | Drop-in skill packages that teach an AI coding assistant the Georgian banking APIs it has never seen: TBC Bank (Checkout, TPay, and the XML CHECK/PAY billing protocol) and Bank of Georgia (iPay, the installment calculator SDK, PSD2 Open Banking). Ask for a payment flow in plain language and the skill pulls in the matching auth flow, endpoints, error codes, and code samples — instead of you reading bank PDFs at 2am. Installs into Claude Code, Cursor, Windsurf, Copilot, Zed, and 37+ other agents with a single `npx skills add`. Python, MIT. |
 
 ---
 
